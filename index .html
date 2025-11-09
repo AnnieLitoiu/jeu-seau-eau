@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Seau d'Eau - Jeu JavaScript - Epreuve Wad25</title>
+    
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">Le Seau d'Eau</h1>
+        </div>
+
+        <div class="game-info">
+            <div class="status" id="gameStatus">Trouvez une source d'eau !</div>
+            <div class="moves-counter">Déplacements: <span id="movesCount">0</span></div>
+        </div>
+
+        <div class="water-gauge">
+            <div class="gauge-title">Arrosage de la plante</div>
+            <div class="gauge-container">
+                <div class="gauge-fill" id="gaugeFill" style="width: 0%"></div>
+            </div>
+            <div class="gauge-text" id="gaugeText">0/3 arrosages</div>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="controls">
+            <button class="btn" onclick="startNewGame()">Nouvelle Partie</button>
+            <button class="btn" onclick="toggleInstructions()">Instructions</button>
+        </div>
+
+        <div class="instructions" id="instructions" style="display: none;">
+            <h3>🎯 Objectif du Jeu</h3>
+            <ul>
+                <li><strong> Vous êtes un seau vide</strong> - Trouvez une source d'eau</li>
+                <li><strong>💧 Remplissez-vous d'eau</strong> - Cliquez sur une source (coins bleus)</li>
+                <li><strong>🌱 Arrosez la plante 3 fois</strong> - Retournez au centre avec l'eau</li>
+                <li><strong>⚠️ Attention aux cases bloquées</strong> - Elles apparaissent aléatoirement</li>
+                <li><strong>🎮 Déplacement</strong> - Vertical, horizontal et diagonal</li>
+            </ul>
+        </div>
+    </div>
+    <script src="jeux.js" rel="javascript"></script>
+</body>
+</html>
